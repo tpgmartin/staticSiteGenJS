@@ -1,0 +1,23 @@
+{
+  "name": "staticSiteGenJS",
+  "version": "1.0.0",
+  "description": "JavaScript Static Site Generator",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tpgmartin/staticSiteGenJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tpgmartin/staticSiteGenJS/issues"
+  },
+  "homepage": "https://github.com/tpgmartin/staticSiteGenJS",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "require-dir": "^0.2.0"
+  }
+}
