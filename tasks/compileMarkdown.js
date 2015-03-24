@@ -1,5 +1,5 @@
-var gulp = require('gulp'),
-    rename = require("gulp-rename"),
+var gulp     = require('gulp'),
+    rename   = require('gulp-rename'),
     markdown = require('gulp-markdown');
 
 gulp.task('compileMarkdown', function () {

@@ -2,11 +2,9 @@ var gulp   = require('gulp'),
     prompt = require('gulp-prompt'),
     fs = require('fs');
 
-// Tasks:
-// * Prompt user to enter title
-// * Automatically generate datetime
-// * Create file name by concatenating title and datetime
-// * Output to _posts/
+// #TODO:
+// * Generate post markup e.g. tags, permalink
+// * Polish task.js
 
 gulp.task('new', function () {
   return gulp.src('./_posts').pipe(prompt.prompt({
