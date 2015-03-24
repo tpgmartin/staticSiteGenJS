@@ -1,8 +1,5 @@
 var gulp   = require('gulp'),
     prompt = require('gulp-prompt'),
-    rename = require('gulp-rename'),
-    file   = require('gulp-file'),
-    shell  = require('gulp-shell'),
     fs = require('fs');
 
 // Tasks:
@@ -17,7 +14,13 @@ gulp.task('new', function () {
         name: 'title',
         message: 'Post title'
     }, function(path){
-      var filename = './_posts/git' + path.title + '.md'
+      var date = new Date();
+      var year = date.getFullYear();
+      var month = '0' + String(date.getMonth()+1);
+      var day = '0' + date.getDate();
+      var title = path.title.replace(' ', '-');
+      var filename = [year, month.slice(-2), day.slice(-2), title].join('-');
+      filename = './_posts/' + filename + '.md';
       fs.writeFile(filename , 'Some markup', function (err) {
         if (err) throw err;
       });
