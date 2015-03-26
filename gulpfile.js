@@ -1,6 +1,6 @@
-var gulp = require('gulp');
-var requireDir = require('require-dir');
-var dir = requireDir('./tasks');
+var gulp       = require('gulp'),
+    requireDir = require('require-dir'),
+    dir        = requireDir('./tasks');
 
 gulp.task('build', ['compileMarkdown', 'compileCSS', 'compileJS']);
 

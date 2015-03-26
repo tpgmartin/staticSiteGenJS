@@ -1,0 +1,9 @@
+{
+  "description": "My blog description",
+  "author": {
+    "name": "Tom Martin",
+    "email": "tom@tpgmartin.com",
+    "github": "tpgmartin",
+    "bio": "Junior developer, London, UK"
+  }
+}
