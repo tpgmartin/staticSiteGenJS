@@ -1,9 +1,27 @@
 {
+  "paginate": 10,
+  "paginate_path": "page:num",
+
+  "defaults": {
+    "path": "",
+    "title": "blogTitle"
+  },
+
   "description": "My blog description",
   "author": {
     "name": "Tom Martin",
+    "twitter": "tpgmartin",
+    "google-plus": 112326764922237690846,
     "email": "tom@tpgmartin.com",
     "github": "tpgmartin",
+    "linkedin": "tpgmartin",
+    "stack-overflow": "3680722/tpgmartin",
     "bio": "Junior developer, London, UK"
-  }
+  },
+  "rss_path": "feed.xml",
+  "about_path": "about",
+  "categories_path": "categories",
+  "tags_path": "tags",
+
+  "BASE_PATH": ""
 }

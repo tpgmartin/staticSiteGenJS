@@ -2,26 +2,24 @@
 <html>
 <head>
   <meta charset="utf-8">
-  {{#if page.title }}
-  <title>{{ page.title }}</title>
+  {{#if pageTitle }}
+  <title>{{ pageTitle }}</title>
   {{else}}
-  <title>{{ site.defaults.title }}</title>
+  <title>{{ defaultTitle }}</title>
   {{/if}}
 
-  {{#if page.description }}
-  <meta name="description" content="{{ page.description }}">
+  {{#if pageDescription }}
+  <meta name="description" content="{{ pageDescription }}">
   {{/if}}
-  <meta name="author" content="{{ site.author.name }}">
+  <meta name="author" content="{{ authorName }}">
 
   <!-- Enable responsive viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="{{ site.BASE_PATH }}/assets/resources/syntax/syntax.css" rel="stylesheet">
-  <link href="{{ site.BASE_PATH }}/assets/css/style.css" rel="stylesheet">
+  <link href="{{ basePath }}/assets/resources/syntax/syntax.css" rel="stylesheet">
+  <link href="{{ basePath }}/assets/css/style.css" rel="stylesheet">
 
-  <link rel="shortcut icon" href="http://www.gravatar.com/avatar/{{site.author.email_md5}}">
-
-  <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.BASE_PATH }}/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ siteName }}" href="{{ basePath }}/feed.xml">
 </head>
 
 <body>
@@ -33,8 +31,6 @@
     {{> _includes/footer }}
   </div>
 
-  <script type="text/javascript" src="{{ site.BASE_PATH }}/assets/resources/jquery/jquery.min.js"></script>
-  <script type="text/javascript" src="{{ site.BASE_PATH }}/assets/resources/bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="{{ site.BASE_PATH }}/assets/js/app.js"></script>
+  <script type="text/javascript" src="{{ basePath }}/assets/js/app.js"></script>
 </body>
 </html>

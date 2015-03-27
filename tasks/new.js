@@ -16,10 +16,11 @@ gulp.task('new', function () {
       var year = date.getFullYear();
       var month = '0' + String(date.getMonth()+1);
       var day = '0' + date.getDate();
-      var title = path.title.replace(' ', '-');
-      var filename = [year, month.slice(-2), day.slice(-2), title].join('-');
+      var title = path.title;
+      var permanlink = title.replace(/ /g,'-');
+      var filename = [year, month.slice(-2), day.slice(-2), permanlink].join('-');
       filename = './_posts/' + filename + '.md';
-      fs.writeFile(filename , 'Some markup', function (err) {
+      fs.writeFile(filename , '---\nlayout:\ntitle: '+title+'\ncategories:\ntags:\npermalink: '+permanlink+'\n---', function (err) {
         if (err) throw err;
       });
     }))
