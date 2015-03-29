@@ -17,7 +17,7 @@ gulp.task('new', function () {
       var month = '0' + String(date.getMonth()+1);
       var day = '0' + date.getDate();
       var title = path.title;
-      var permanlink = title.replace(/ /g,'-');
+      var permanlink = title.replace(/ /g,'-').toLowerCase();
       var filename = [year, month.slice(-2), day.slice(-2), permanlink].join('-');
       filename = './_posts/' + filename + '.md';
       fs.writeFile(filename , '---\nlayout:\ntitle: '+title+'\ncategories:\ntags:\npermalink: '+permanlink+'\n---', function (err) {
