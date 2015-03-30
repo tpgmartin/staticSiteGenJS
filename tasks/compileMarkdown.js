@@ -1,5 +1,6 @@
 var gulp        = require('gulp'),
     rename      = require('gulp-rename'),
+    markdown    = require('gulp-marked')
     data        = require('gulp-data'),
     pluck       = require('gulp-pluck'),
     frontMatter = require('gulp-front-matter');
