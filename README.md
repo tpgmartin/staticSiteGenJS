@@ -11,3 +11,4 @@ JavaScript Static Site Generator
 
 ## Notes
 * [gulp-scss-lint](https://github.com/juanfran/gulp-scss-lint) requires Ruby and scss-lint, `gem install scss-lint`
+* Lookup JS object http://stackoverflow.com/questions/7364150/find-object-by-id-in-array-of-javascript-objects 

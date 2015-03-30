@@ -6,6 +6,6 @@ gulp.task('compileMarkdown', ['markdown', 'frontMatterToJSON']);
 
 gulp.task('sass', ['scssLint', 'compileSass']);
 
-gulp.task('build', ['compileMarkdown', 'compileCSS', 'compileJS']);
+gulp.task('build', ['copy', 'compileMarkdown', 'compileCSS', 'compileJS']);
 
 gulp.task('serve', ['build', 'connect']);

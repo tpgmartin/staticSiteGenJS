@@ -12,6 +12,10 @@ gulp.task('markdown', function () {
       path.dirname = path.basename.slice(11);
       path.basename = 'index'
     }))
+    .pipe(frontMatter({ // optional configuration 
+      property: 'frontMatter', // property added to file object 
+      remove: true // should we remove front-matter header? 
+    }))
     .pipe(markdown())
     .pipe(gulp.dest('./_site'));
 });
