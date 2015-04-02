@@ -1,6 +1,7 @@
 var gulp        = require('gulp'),
     rename      = require('gulp-rename'),
-    markdown    = require('gulp-marked')
+    markdown    = require('gulp-marked'),
+    merge       = require('merge2'),
     data        = require('gulp-data'),
     pluck       = require('gulp-pluck'),
     frontMatter = require('gulp-front-matter');
@@ -9,13 +10,11 @@ gulp.task('markdown', function () {
   return gulp.src('./_posts/*.md')
     .pipe(rename(function (path) {
       // remove date, trailing hyphen
+      console.log(path);
       path.dirname = path.basename.slice(11);
       path.basename = 'index'
     }))
-    .pipe(frontMatter({ // optional configuration 
-      property: 'frontMatter', // property added to file object 
-      remove: true // should we remove front-matter header? 
-    }))
+    .pipe(frontMatter({remove: true}))
     .pipe(markdown())
     .pipe(gulp.dest('./_site'));
 });
